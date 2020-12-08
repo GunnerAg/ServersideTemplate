@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ManishPoduval/mongoose-express-starter#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "mongoose": "^5.9.16",

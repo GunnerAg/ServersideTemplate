@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 //ensure database is connected
 require('./config/database.config')
@@ -7,6 +8,10 @@ require('./config/database.config')
 //Use body parser. To be able parse post request information
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+
+//Enable all cross origin requests
+app.use(cors())
 
 //Register routes
 const todoRoutes = require('./routes/todo.routes');
